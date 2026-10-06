@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FROSTBITE297 | Student Developer & Future Software Engineer</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Portfolio of FROSTBITE297 - A passionate middle-school student developer building web applications, Python projects, interactive p5.js graphics, and exploring AI & software engineering.">
+    <meta name="keywords" content="FROSTBITE297, Student Developer, Portfolio, Software Engineer, Web Development, Python, JavaScript, p5.js, Young Developer">
+    <meta name="author" content="FROSTBITE297">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://frostbite297.dev/">
+    <meta property="og:title" content="FROSTBITE297 | Student Developer & Future Software Engineer">
+    <meta property="og:description" content="Middle-school developer creating real projects with Web Tech, Python, JavaScript, p5.js, and AI automation.">
+    <meta property="og:image" content="https://frostbite297.dev/og-image.png">
+
+    <!-- Favicon (SVG Data URI) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%232563eb'/><text x='50%' y='65%' font-family='monospace' font-weight='bold' font-size='48' fill='white' text-anchor='middle'>FB</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- p5.js Library for Interactive Canvas Demos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-terminal">
+                <span class="prompt">frostbite297@dev:~$</span> <span id="typing-loader">init portfolio_system.sh...</span><span class="cursor">_</span>
+            </div>
+            <div class="loader-bar-container">
+                <div class="loader-bar" id="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar-header" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-icon"><i class="fa-solid fa-code"></i></span>
+                <span class="brand-text">FROSTBITE<span class="brand-accent">297</span></span>
+                <span class="brand-badge">DEV</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a>
+                <a href="#skills" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Skills</a>
+                <a href="#projects" class="nav-link"><i class="fa-solid fa-rocket"></i> Projects</a>
+                <a href="#learning" class="nav-link"><i class="fa-solid fa-brain"></i> Learning</a>
+                <a href="#journey" class="nav-link"><i class="fa-solid fa-route"></i> Journey</a>
+                <a href="#achievements" class="nav-link"><i class="fa-solid fa-trophy"></i> Achievements</a>
+                <a href="#contact" class="nav-link btn-nav-contact">Contact Me</a>
+            </nav>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="mobile-drawer-header">
+            <span class="brand-text">FROSTBITE<span class="brand-accent">297</span></span>
+            <button class="mobile-close-btn" id="mobile-close-btn">&times;</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#hero" class="mobile-link"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#about" class="mobile-link"><i class="fa-solid fa-user"></i> About</a>
+            <a href="#skills" class="mobile-link"><i class="fa-solid fa-laptop-code"></i> Skills</a>
+            <a href="#projects" class="mobile-link"><i class="fa-solid fa-rocket"></i> Projects</a>
+            <a href="#learning" class="mobile-link"><i class="fa-solid fa-brain"></i> Currently Learning</a>
+            <a href="#journey" class="mobile-link"><i class="fa-solid fa-route"></i> My Journey</a>
+            <a href="#achievements" class="mobile-link"><i class="fa-solid fa-trophy"></i> Achievements</a>
+            <a href="#contact" class="mobile-link mobile-btn-contact">Contact Me</a>
+        </div>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-shapes">
+                <div class="bg-blur blur-1"></div>
+                <div class="bg-blur blur-2"></div>
+                <div class="hero-grid-pattern"></div>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-text-content">
+                    <div class="hero-badge-pill">
+                        <span class="pulse-dot"></span> Middle-School Developer & Enthusiast
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight-blue">FROSTBITE297</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Student Developer & Future Software Engineer
+                    </p>
+                    
+                    <p class="hero-description">
+                        I'm a passionate middle-school student who loves programming, constructing clean modern websites, experimenting with innovative technology, and building real projects from scratch.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Projects</span>
+                            <i class="fa-solid fa-arrow-down-long"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Contact Me</span>
+                            <i class="fa-regular fa-envelope"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-quick-tags">
+                        <span class="tag"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="tag"><i class="fa-solid fa-shapes"></i> p5.js</span>
+                        <span class="tag"><i class="fa-solid fa-cube"></i> Minecraft Tech</span>
+                    </div>
+                </div>
+
+                <!-- Futuristic Code Window Graphic -->
+                <div class="hero-visual">
+                    <div class="code-terminal-card">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="terminal-title">developer_profile.py</div>
+                            <div class="terminal-actions">
+                                <span class="status-live"><i class="fa-solid fa-circle"></i> ACTIVE</span>
+                            </div>
+                        </div>
+                        <div class="terminal-body">
+                            <pre class="code-block"><code><span class="keyword">class</span> <span class="class-name">Developer</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(self):
+        self.handle = <span class="string">"FROSTBITE297"</span>
+        self.role = <span class="string">"Student & Future Engineer"</span>
+        self.passion = [<span class="string">"Coding"</span>, <span class="string">"Web Dev"</span>, <span class="string">"AI"</span>]
+        self.mode = <span class="string">"Building & Experimenting 🚀"</span>
+
+    <span class="keyword">def</span> <span class="function">current_mission</span>(self):
+        <span class="keyword">return</span> <span class="string">"Turn creative ideas into clean code"</span>
+
+<span class="comment"># Instantiate developer profile</span>
+me = Developer()
+print(me.current_mission())</code></pre>
+                        </div>
+                        <div class="terminal-footer">
+                            <div class="console-output">
+                                <span class="out-prefix">></span> <span id="hero-live-type">Turn creative ideas into clean code</span><span class="cursor-blink">|</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-badge">ABOUT ME</span>
+                    <h2 class="section-title">Driven by Curiosity & Hands-On Code</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card main-about-card reveal">
+                        <div class="about-card-icon">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h3>Building over Theory</h3>
+                        <p>
+                            I am a middle-school student passionate about programming and technology. I enjoy learning by <strong>actually building things</strong> rather than only studying theoretical concepts on paper.
+                        </p>
+                        <p>
+                            Whether it's crafting responsive web applications, writing Python scripts for automation, developing interactive graphics with p5.js, or experimenting with game mechanics, I love solving problems and bringing software ideas to life.
+                        </p>
+                    </div>
+
+                    <div class="about-card interests-card reveal">
+                        <h3>What Sparks My Interest</h3>
+                        <ul class="interests-list">
+                            <li>
+                                <div class="interest-icon"><i class="fa-solid fa-globe"></i></div>
+                                <div>
+                                    <strong>Web Development</strong>
+                                    <p>Crafting modern, accessible, and clean user interfaces.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="interest-icon"><i class="fa-brands fa-python"></i></div>
+                                <div>
+                                    <strong>Python & Automation</strong>
+                                    <p>Building scripts, parsing data, and streamlining tasks.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="interest-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                <div>
+                                    <strong>p5.js & Interactive Art</strong>
+                                    <p>Coding generative art, particles, and browser animations.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="interest-icon"><i class="fa-solid fa-gamepad"></i></div>
+                                <div>
+                                    <strong>Game Dev & Minecraft</strong>
+                                    <p>Exploring game mechanics, logic, and custom modding/servers.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="interest-icon"><i class="fa-solid fa-microchip"></i></div>
+                                <div>
+                                    <strong>AI & Emerging Tech</strong>
+                                    <p>Experimenting with AI tools, APIs, and smart automation concepts.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Highlights & Statistics Bar -->
+                <div class="stats-grid reveal">
+                    <div class="stat-card">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Projects Built</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Technologies Learned</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years Coding</div>
+                    </div>
+                    <div class="stat-card highlight-stat">
+                        <div class="stat-number">Full-Stack</div>
+                        <div class="stat-label">Currently Learning</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section bg-light">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-badge">MY TOOLBOX</span>
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <p class="section-subtitle">
+                        Technologies I actively use to construct projects and experiment with new ideas.
+                    </p>
+                    <div class="section-underline"></div>
+                </div>
+
+                <!-- Skill Categories -->
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-category-card reveal">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fa-solid fa-code"></i></div>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-badge">
+                                <i class="fa-brands fa-python skill-ico py-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level">Core Scripting & Logic</span>
+                                </div>
+                            </div>
+                            <div class="skill-badge">
+                                <i class="fa-brands fa-js skill-ico js-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-level">Web Logic & Interactivity</span>
+                                </div>
+                            </div>
+                            <div class="skill-badge">
+                                <i class="fa-brands fa-html5 skill-ico html-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML</span>
+                                    <span class="skill-level">Semantic Structure</span>
+                                </div>
+                            </div>
+                            <div class="skill-badge">
+                                <i class="fa-brands fa-css3-alt skill-ico css-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">CSS</span>
+                                    <span class="skill-level">Modern Layouts & Styling</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Creative / Interactive -->
+                    <div class="skill-category-card reveal">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fa-solid fa-palette"></i></div>
+                            <h3>Creative / Interactive</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-badge">
+                                <i class="fa-solid fa-shapes skill-ico p5-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">p5.js</span>
+                                    <span class="skill-level">Interactive Animations</span>
+                                </div>
+                            </div>
+                            <div class="skill-badge">
+                                <i class="fa-solid fa-gamepad skill-ico game-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Game Development</span>
+                                    <span class="skill-level">2D Physics & Game Mechanics</span>
+                                </div>
+                            </div>
+                            <div class="skill-badge">
+                                <i class="fa-solid fa-clapperboard skill-ico anim-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Interactive Animations</span>
+                                    <span class="skill-level">DOM & Canvas Transitions</span>
+                                </div>
+                            </div>
+                            <div class="skill-badge">
+                                <i class="fa-solid fa-cubes skill-ico craft-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Minecraft Tech</span>
+                                    <span class="skill-level">Logic & Redstone/Server Tech</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Technologies -->
+                    <div class="skill-category-card reveal">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fa-solid fa-wrench"></i></div>
+                            <h3>Tools & Technologies</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-badge">
+                                <i class="fa-brands fa-github skill-ico gh-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">GitHub</span>
+                                    <span class="skill-level">Version Control & Repos</span>
+                                </div>
+                            </div>
+                            <div class="skill-badge">
+                                <i class="fa-solid fa-robot skill-ico ai-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">AI Tools</span>
+                                    <span class="skill-level">Prompting & Coding Assistance</span>
+                                </div>
+                            </div>
+                            <div class="skill-badge">
+                                <i class="fa-solid fa-network-wired skill-ico api-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">APIs</span>
+                                    <span class="skill-level">Data Fetching & Integration</span>
+                                </div>
+                            </div>
+                            <div class="skill-badge">
+                                <i class="fa-solid fa-gears skill-ico auto-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Automation</span>
+                                    <span class="skill-level">Workflow Efficiency</span>
+                                </div>
+                            </div>
+                            <div class="skill-badge">
+                                <i class="fa-solid fa-laptop-code skill-ico web-ico"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Modern Web Dev</span>
+                                    <span class="skill-level">Responsive Design Standards</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-badge">FEATURED WORK</span>
+                    <h2 class="section-title">Projects I've Built & Conceptualized</h2>
+                    <p class="section-subtitle">
+                        A showcase of real code repositories, front-end websites, and futuristic project concepts.
+                    </p>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1: Brew Haven Coffee -->
+                    <div class="project-card reveal">
+                        <div class="project-banner project-banner-brew">
+                            <div class="project-status-badge status-completed">
+                                <i class="fa-solid fa-check-circle"></i> Completed Website
+                            </div>
+                            <div class="project-icon-box">
+                                <i class="fa-solid fa-mug-hot"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Brew Haven Coffee</h3>
+                            <p class="project-desc">
+                                A handcrafted coffee shop website built with HTML and CSS, featuring a modern design, menu sections, navigation, and a working contact form.
+                            </p>
+                            <div class="project-tags">
+                                <span class="ptag">HTML</span>
+                                <span class="ptag">CSS</span>
+                                <span class="ptag">Responsive Design</span>
+                                <span class="ptag">Contact Form</span>
+                            </div>
+                            <div class="project-footer">
+                                <button class="btn-project-link open-project-modal" data-project="brew-haven">
+                                    <i class="fa-solid fa-eye"></i> View Details
+                                </button>
+                                <a href="https://github.com/frostbite297/brew-haven-coffee" target="_blank" rel="noopener" class="btn-project-icon" title="View Source on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: QueueSnap -->
+                    <div class="project-card reveal">
+                        <div class="project-banner project-banner-queue">
+                            <div class="project-status-badge status-concept">
+                                <i class="fa-solid fa-lightbulb"></i> Platform Concept
+                            </div>
+                            <div class="project-icon-box">
+                                <i class="fa-solid fa-user-clock"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">QueueSnap</h3>
+                            <p class="project-desc">
+                                A concept for a virtual queue management platform designed to reduce waiting times at places such as hospitals, banks, restaurants, salons, and government offices.
+                            </p>
+                            <div class="project-tags">
+                                <span class="ptag">JavaScript</span>
+                                <span class="ptag">UI/UX Concept</span>
+                                <span class="ptag">Virtual Queuing</span>
+                                <span class="ptag">Web App</span>
+                            </div>
+                            <div class="project-footer">
+                                <button class="btn-project-link open-project-modal" data-project="queuesnap">
+                                    <i class="fa-solid fa-eye"></i> View Details
+                                </button>
+                                <a href="https://github.com/frostbite297/queuesnap-concept" target="_blank" rel="noopener" class="btn-project-icon" title="View Source on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: FixMate -->
+                    <div class="project-card reveal">
+                        <div class="project-banner project-banner-fixmate">
+                            <div class="project-status-badge status-concept">
+                                <i class="fa-solid fa-microchip"></i> AI Concept
+                            </div>
+                            <div class="project-icon-box">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">FixMate</h3>
+                            <p class="project-desc">
+                                An AI-powered troubleshooting concept where users can submit screenshots of technical problems and receive guided solutions.
+                            </p>
+                            <div class="project-tags">
+                                <span class="ptag">Python</span>
+                                <span class="ptag">AI Tools</span>
+                                <span class="ptag">Vision API Concept</span>
+                                <span class="ptag">Troubleshooting</span>
+                            </div>
+                            <div class="project-footer">
+                                <button class="btn-project-link open-project-modal" data-project="fixmate">
+                                    <i class="fa-solid fa-eye"></i> View Details
+                                </button>
+                                <a href="https://github.com/frostbite297/fixmate-ai" target="_blank" rel="noopener" class="btn-project-icon" title="View Source on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Interactive p5.js Projects -->
+                    <div class="project-card project-card-featured reveal">
+                        <div class="project-banner project-banner-p5">
+                            <div class="project-status-badge status-active">
+                                <i class="fa-solid fa-play"></i> Live Sandbox Demo
+                            </div>
+                            <div class="project-icon-box">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Interactive p5.js Projects</h3>
+                            <p class="project-desc">
+                                A collection of creative browser experiments and interactive animations built with JavaScript and p5.js.
+                            </p>
+                            <div class="project-tags">
+                                <span class="ptag">JavaScript</span>
+                                <span class="ptag">p5.js</span>
+                                <span class="ptag">Interactive Animations</span>
+                                <span class="ptag">Generative Art</span>
+                            </div>
+
+                            <!-- Embedded Live Canvas Mini Demo -->
+                            <div class="mini-p5-container">
+                                <div class="mini-p5-header">
+                                    <span><i class="fa-solid fa-sparkles"></i> Interactive Particle Canvas (Hover / Move Mouse)</span>
+                                </div>
+                                <div id="p5-hero-canvas-box" class="p5-canvas-holder"></div>
+                            </div>
+
+                            <div class="project-footer">
+                                <button class="btn-project-link open-project-modal" data-project="p5-experiments">
+                                    <i class="fa-solid fa-expand"></i> Launch Interactive Sandbox
+                                </button>
+                                <a href="https://github.com/frostbite297/p5js-creative-coding" target="_blank" rel="noopener" class="btn-project-icon" title="View Source on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Currently Learning Section -->
+        <section id="learning" class="section learning-section bg-light">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-badge">EVOLVING JOURNEY</span>
+                    <h2 class="section-title">Currently Learning</h2>
+                    <p class="section-subtitle">
+                        Software development is constantly evolving. Here are the topics and skills I am currently exploring.
+                    </p>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="learning-grid">
+                    <div class="learning-card reveal">
+                        <div class="learning-icon"><i class="fa-brands fa-js"></i></div>
+                        <div class="learning-details">
+                            <h3>Advanced JavaScript</h3>
+                            <p>Deepening knowledge of asynchronous JS, promises, DOM manipulation, ES6+ features, and modular code architecture.</p>
+                            <span class="learning-pill">Core Focus</span>
+                        </div>
+                    </div>
+
+                    <div class="learning-card reveal">
+                        <div class="learning-icon"><i class="fa-solid fa-robot"></i></div>
+                        <div class="learning-details">
+                            <h3>AI Development</h3>
+                            <p>Exploring how to integrate intelligent APIs, automated reasoning, and prompt pipelines into web applications.</p>
+                            <span class="learning-pill">Exploring</span>
+                        </div>
+                    </div>
+
+                    <div class="learning-card reveal">
+                        <div class="learning-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <div class="learning-details">
+                            <h3>APIs</h3>
+                            <p>Learning RESTful API design, data fetching, JSON processing, and connecting front-end interfaces to live data.</p>
+                            <span class="learning-pill">In Progress</span>
+                        </div>
+                    </div>
+
+                    <div class="learning-card reveal">
+                        <div class="learning-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="learning-details">
+                            <h3>Full-Stack Web Development</h3>
+                            <p>Bridging front-end design with back-end logic to build complete end-to-end web applications.</p>
+                            <span class="learning-pill">Target Skill</span>
+                        </div>
+                    </div>
+
+                    <div class="learning-card reveal">
+                        <div class="learning-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                        <div class="learning-details">
+                            <h3>Better UI/UX Design</h3>
+                            <p>Studying layout balance, typography contrast, visual hierarchy, and creating seamless user experiences.</p>
+                            <span class="learning-pill">Continuous</span>
+                        </div>
+                    </div>
+
+                    <div class="learning-card reveal">
+                        <div class="learning-icon"><i class="fa-solid fa-gears"></i></div>
+                        <div class="learning-details">
+                            <h3>Automation</h3>
+                            <p>Creating scripts and workflows to automate repetitive development and administrative tasks.</p>
+                            <span class="learning-pill">In Progress</span>
+                        </div>
+                    </div>
+
+                    <div class="learning-card reveal">
+                        <div class="learning-icon"><i class="fa-brands fa-python"></i></div>
+                        <div class="learning-details">
+                            <h3>Python Development</h3>
+                            <p>Building more complex Python programs, data utilities, and exploring backend frameworks.</p>
+                            <span class="learning-pill">Core Skill</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progression Journey Section -->
+        <section id="journey" class="section journey-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-badge">TIMELINE</span>
+                    <h2 class="section-title">My Journey</h2>
+                    <p class="section-subtitle">
+                        My progression as a student developer step by step.
+                    </p>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+
+                    <!-- Step 1 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"><i class="fa-solid fa-flag-checkered"></i></div>
+                        <div class="timeline-content">
+                            <h3>Started Coding</h3>
+                            <p>Sparked interest in programming, learning logic and writing basic scripts.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"><i class="fa-solid fa-cube"></i></div>
+                        <div class="timeline-content">
+                            <h3>Built Small Projects</h3>
+                            <p>Created initial Python scripts, experimented with game logic and basic algorithms.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
+                        <div class="timeline-content">
+                            <h3>Learned Web Development</h3>
+                            <p>Discovered HTML, CSS, and JavaScript, understanding how websites are structured and styled.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"><i class="fa-solid fa-globe"></i></div>
+                        <div class="timeline-content">
+                            <h3>Started Building Real Websites</h3>
+                            <p>Developed complete web projects like Brew Haven Coffee and creative p5.js browser applications.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="timeline-item timeline-current reveal">
+                        <div class="timeline-dot active-glow"><i class="fa-solid fa-sparkles"></i></div>
+                        <div class="timeline-content highlight-content">
+                            <h3>Exploring AI & Software Development</h3>
+                            <p>Designing advanced platform concepts like QueueSnap & FixMate, mastering APIs, and preparing for future software engineering challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section achievements-section bg-light">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-badge">MILESTONES</span>
+                    <h2 class="section-title">Achievements</h2>
+                    <p class="section-subtitle">
+                        Coding milestones, school activities, project accomplishments, and future targets.
+                    </p>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="achievements-grid">
+                    <!-- Achievement 1 -->
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="achievement-info">
+                            <span class="achievement-category">Coding Achievements</span>
+                            <h3>Completed 15+ Developer Projects</h3>
+                            <p>Built responsive web interfaces, interactive p5.js canvases, and utility Python scripts.</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 2 -->
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="achievement-info">
+                            <span class="achievement-category">School Achievements</span>
+                            <h3>Student Tech Enthusiast & Leader</h3>
+                            <p>Recognized for technology enthusiasm and helping classmates understand coding basics.</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 3 -->
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fa-solid fa-shapes"></i></div>
+                        <div class="achievement-info">
+                            <span class="achievement-category">Projects</span>
+                            <h3>Published p5.js Interactive Collection</h3>
+                            <p>Created a series of interactive browser particle systems and visual canvas experiments.</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 4 -->
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fa-solid fa-medal"></i></div>
+                        <div class="achievement-info">
+                            <span class="achievement-category">Competitions & Clubs</span>
+                            <h3>Coding Club & STEM Activities</h3>
+                            <p>Active participation in technology clubs, coding challenges, and school STEM initiatives.</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 5 -->
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fa-solid fa-certificate"></i></div>
+                        <div class="achievement-info">
+                            <span class="achievement-category">Certifications</span>
+                            <h3>Web & Python Course Progress</h3>
+                            <p>Actively completing structured courses in modern HTML/CSS, JavaScript, and Python.</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 6 -->
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <div class="achievement-info">
+                            <span class="achievement-category">Other Accomplishments</span>
+                            <h3>GitHub Project Showcase</h3>
+                            <p>Maintaining organized, well-documented code repositories on GitHub for personal projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-badge">GET IN TOUCH</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <p class="section-subtitle">
+                        Have a question, want to collaborate, or feedback on my projects? Drop me a message below!
+                    </p>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Left: Contact Details & Social Placeholders -->
+                    <div class="contact-info-card reveal">
+                        <h3>Connect With Me</h3>
+                        <p class="contact-lead">
+                            I'm always excited to connect about programming, web development, and new technology projects.
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <span class="item-label">Email</span>
+                                    <a href="mailto:frostbite297.dev@example.com" class="item-value">frostbite297.dev@example.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                                <div>
+                                    <span class="item-label">GitHub</span>
+                                    <a href="https://github.com/frostbite297" target="_blank" rel="noopener" class="item-value">github.com/frostbite297</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+                                <div>
+                                    <span class="item-label">LinkedIn</span>
+                                    <span class="item-value placeholder-link">linkedin.com/in/frostbite297</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quick-copy-box">
+                            <span>Quick Copy Email:</span>
+                            <button id="copy-email-btn" class="btn-copy">
+                                <i class="fa-regular fa-copy"></i> <span id="copy-btn-text">Copy Email</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="contact-form-card reveal">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form" action="https://formsubmit.co/muasim1714@gmail.com" method="POST" class="contact-form" novalidate>
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="New Contact Message - FROSTBITE297 Portfolio">
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <div class="form-group">
+                                <label for="contact-name">Name <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-user input-icon"></i>
+                                    <input type="text" id="contact-name" name="name" placeholder="Enter your name" required>
+                                </div>
+                                <span class="error-msg" id="name-error">Please enter your name.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-email">Email <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-envelope input-icon"></i>
+                                    <input type="email" id="contact-email" name="email" placeholder="Enter your email" required>
+                                </div>
+                                <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-phone input-icon"></i>
+                                    <input type="tel" id="contact-phone" name="phone" placeholder="Enter your phone number" required>
+                                </div>
+                                <span class="error-msg" id="phone-error">Please enter your phone number.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message">Message <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <textarea id="contact-message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+                                </div>
+                                <span class="error-msg" id="message-error">Please enter your message.</span>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
+                                <span id="btn-text">Send Message</span>
+                                <i class="fa-regular fa-paper-plane" id="btn-icon"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#hero" class="footer-brand">
+                    <span class="brand-text">FROSTBITE<span class="brand-accent">297</span></span>
+                </a>
+                <p class="footer-tagline">Student Developer & Future Software Engineer</p>
+            </div>
+
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#journey">Journey</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="social-icons">
+                    <a href="https://github.com/frostbite297" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:frostbite297.dev@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#hero" aria-label="Top"><i class="fa-solid fa-arrow-up"></i></a>
+                </div>
+                <p class="footer-copyright">&copy; <span id="current-year">2026</span> FROSTBITE297. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Project Details Modal -->
+    <div class="modal-backdrop" id="project-modal">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Popup -->
+    <div class="toast-container" id="toast-container">
+        <div class="toast" id="toast">
+            <div class="toast-icon" id="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="toast-message" id="toast-message">Message sent successfully!</div>
+        </div>
+    </div>
+
+    <!-- Floating AI Portfolio Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <!-- Floating Toggle Button -->
+        <button class="chatbot-toggle-btn" id="chatbot-toggle-btn" aria-label="Open AI Assistant Chatbot">
+            <div class="toggle-icon-open"><i class="fa-solid fa-robot"></i></div>
+            <div class="toggle-icon-close"><i class="fa-solid fa-xmark"></i></div>
+            <span class="chatbot-badge-pulse"></span>
+        </button>
+
+        <!-- Chat Window Card -->
+        <div class="chatbot-window" id="chatbot-window">
+            <!-- Header -->
+            <div class="chatbot-header">
+                <div class="chatbot-bot-info">
+                    <div class="chatbot-avatar">
+                        <i class="fa-solid fa-robot"></i>
+                        <span class="avatar-online-dot"></span>
+                    </div>
+                    <div>
+                        <h4 class="chatbot-title">FROSTBITE AI Assistant</h4>
+                        <span class="chatbot-status">Ask me anything about FROSTBITE297!</span>
+                    </div>
+                </div>
+                <div class="chatbot-actions">
+                    <button id="chatbot-reset-btn" title="Reset Conversation"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button id="chatbot-close-btn" title="Close Chat"><i class="fa-solid fa-chevron-down"></i></button>
+                </div>
+            </div>
+
+            <!-- Messages Body -->
+            <div class="chatbot-body" id="chatbot-body">
+                <div class="chat-message bot-message">
+                    <div class="message-bubble">
+                        <p>👋 Hi! I'm <strong>FROSTBITE AI Assistant</strong>. Ask me anything about FROSTBITE297's projects, programming skills, currently learning topics, or background!</p>
+                    </div>
+                </div>
+
+                <!-- Quick Prompt Chips -->
+                <div class="quick-prompts" id="quick-prompts">
+                    <button class="prompt-chip" data-prompt="What projects has FROSTBITE297 built?">🚀 Projects Built</button>
+                    <button class="prompt-chip" data-prompt="What programming languages does he know?">💻 Languages & Skills</button>
+                    <button class="prompt-chip" data-prompt="What is he currently learning?">🧠 Currently Learning</button>
+                    <button class="prompt-chip" data-prompt="How can I contact FROSTBITE297?">📬 Contact Info</button>
+                </div>
+            </div>
+
+            <!-- Footer / Input Box -->
+            <div class="chatbot-footer">
+                <form id="chatbot-form">
+                    <input type="text" id="chatbot-input" placeholder="Ask about skills, projects, journey..." autocomplete="off" required>
+                    <button type="submit" id="chatbot-send-btn" aria-label="Send message">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
