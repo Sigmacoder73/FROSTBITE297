@@ -707,6 +707,66 @@ document.addEventListener('DOMContentLoaded', () => {
         • "How can I contact him?"`;
     }
 
+    // Gemini API & Local Knowledge Matcher integration
+    async function fetchGeminiResponse(userText) {
+        if (typeof GEMINI_CONFIG === 'undefined' || !GEMINI_CONFIG.apiKey || GEMINI_CONFIG.apiKey.includes('YOUR_GEMINI_API_KEY')) {
+            return getBotResponse(userText);
+        }
+
+        const systemPrompt = `You are FROSTBITE AI Assistant, an AI representative for FROSTBITE297 (Student Developer & Future Software Engineer).
+FROSTBITE297 is a middle-school student passionate about programming, web dev, Python, JavaScript, p5.js interactive art, game dev, and AI.
+Portfolio information:
+- Projects: Brew Haven Coffee (HTML/CSS handcrafted coffee shop site), QueueSnap (virtual queuing platform concept), FixMate AI (AI troubleshooting concept), Interactive p5.js Projects (particle sandbox).
+- Skills: Python, JavaScript, HTML, CSS, p5.js, Game Dev, Minecraft Tech, GitHub, APIs, Automation.
+- Currently Learning: Advanced JavaScript, AI Development, REST APIs, Full-stack Web Dev, UI/UX Design, Python.
+- Journey: Started Coding -> Small Projects -> Learned Web Dev -> Real Websites -> Exploring AI & Software Development.
+- Achievements: 15+ built projects, Student Tech Leader, p5.js Creative Collection, STEM activities.
+- Contact: Email frostbite297.dev@example.com, FormSubmit target muasim1714@gmail.com, GitHub github.com/frostbite297.
+Respond enthusiastically, helpfully, and concisely (2-4 sentences max). Use formatting like <strong>, <code>, or emojis where appropriate.`;
+
+        const model = (GEMINI_CONFIG && GEMINI_CONFIG.model) ? GEMINI_CONFIG.model : 'gemini-1.5-flash';
+        const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${GEMINI_CONFIG.apiKey}`;
+
+        try {
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    contents: [
+                        {
+                            role: 'user',
+                            parts: [
+                                { text: systemPrompt },
+                                { text: `User Question: ${userText}` }
+                            ]
+                        }
+                    ],
+                    generationConfig: {
+                        temperature: 0.7,
+                        maxOutputTokens: 300
+                    }
+                })
+            });
+
+            if (!response.ok) {
+                return getBotResponse(userText);
+            }
+
+            const data = await response.json();
+            const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+            if (text) {
+                return text
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                    .replace(/`(.*?)`/g, '<code>$1</code>')
+                    .replace(/\n/g, '<br>');
+            }
+            return getBotResponse(userText);
+        } catch (err) {
+            return getBotResponse(userText);
+        }
+    }
+
     function appendMessage(sender, text) {
         const msgDiv = document.createElement('div');
         msgDiv.className = `chat-message ${sender}-message`;
@@ -733,7 +793,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typingDiv) typingDiv.remove();
     }
 
-    function handleChatSubmit(userText) {
+    async function handleChatSubmit(userText) {
         if (!userText.trim()) return;
 
         appendMessage('user', userText);
@@ -744,11 +804,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         showTypingIndicator();
 
-        setTimeout(() => {
-            removeTypingIndicator();
-            const botReply = getBotResponse(userText);
-            appendMessage('bot', botReply);
-        }, 600);
+        const botReply = await fetchGeminiResponse(userText);
+
+        removeTypingIndicator();
+        appendMessage('bot', botReply);
     }
 
     function bindPromptChips() {

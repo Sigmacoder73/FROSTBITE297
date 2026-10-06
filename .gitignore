@@ -7,4 +7,6 @@ desktop.ini
 *.log
 .venv/
 node_modules/
+# Credentials & Secret Configs
 .env
+config.js
