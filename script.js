@@ -555,7 +555,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (copyEmailBtn) {
         copyEmailBtn.addEventListener('click', () => {
-            const email = "frostbite297.dev@example.com";
+            const email = "muasim1714@gmail.com";
             navigator.clipboard.writeText(email).then(() => {
                 copyBtnText.textContent = "Copied!";
                 copyEmailBtn.style.backgroundColor = "var(--color-blue-primary)";
@@ -568,7 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     copyEmailBtn.style.color = "";
                 }, 2500);
             }).catch(() => {
-                showToast("Email: frostbite297.dev@example.com");
+                showToast("Email: muasim1714@gmail.com");
             });
         });
     }
@@ -670,8 +670,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Contact & Socials
         if (q.includes('contact') || q.includes('email') || q.includes('reach') || q.includes('message') || q.includes('phone') || q.includes('hire') || q.includes('github')) {
             return `📬 <strong>How to Reach FROSTBITE297:</strong><br><br>
-            • <strong>Email:</strong> <code>frostbite297.dev@example.com</code><br>
-            • <strong>GitHub:</strong> <a href="https://github.com/frostbite297" target="_blank" style="color:#2563eb; text-decoration:underline;">github.com/frostbite297</a><br>
+            • <strong>Email:</strong> <code>muasim1714@gmail.com</code><br>
+            • <strong>GitHub:</strong> <a href="https://github.com/Sigmacoder73" target="_blank" style="color:#2563eb; text-decoration:underline;">github.com/Sigmacoder73</a><br>
             • <strong>Contact Form:</strong> Scroll down to the Contact section on this page to send a direct message!`;
         }
 
@@ -721,7 +721,7 @@ Portfolio information:
 - Currently Learning: Advanced JavaScript, AI Development, REST APIs, Full-stack Web Dev, UI/UX Design, Python.
 - Journey: Started Coding -> Small Projects -> Learned Web Dev -> Real Websites -> Exploring AI & Software Development.
 - Achievements: 15+ built projects, Student Tech Leader, p5.js Creative Collection, STEM activities.
-- Contact: Email frostbite297.dev@example.com, FormSubmit target muasim1714@gmail.com, GitHub github.com/frostbite297.
+- Contact: Email muasim1714@gmail.com, GitHub github.com/Sigmacoder73.
 Respond enthusiastically, helpfully, and concisely (2-4 sentences max). Use formatting like <strong>, <code>, or emojis where appropriate.`;
 
         const model = (GEMINI_CONFIG && GEMINI_CONFIG.model) ? GEMINI_CONFIG.model : 'gemini-1.5-flash';
